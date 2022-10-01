@@ -1,8 +1,14 @@
 package com.library;
 
+import com.library.util.HibernateUtil;
+import org.hibernate.Session;
+
 public class Main {
     public static void main(String[] args) {
-        View view = new View();
-        System.out.println(view.getInput());
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+
+
+        session.close();
     }
 }
