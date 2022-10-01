@@ -4,7 +4,7 @@ import com.library.model.User;
 
 import java.util.Optional;
 
-public interface UserDao {
+public interface UserByLogin {
 
     Optional<User> getUserByLogin(String login);
 
