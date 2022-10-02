@@ -26,7 +26,6 @@ public class LoginServiceImpl implements LoginService {
                 .map(user -> checkUserPassword(user, password))
                 .orElse(false);
     }
-
     private boolean checkUserPassword(User user, String providedPassword) {
         return user.getPassword().equals(providedPassword);
     }

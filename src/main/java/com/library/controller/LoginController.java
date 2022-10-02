@@ -25,9 +25,11 @@ public class LoginController {
            loginView.display();
         } else {
 
-
+            // tutaj set active usera
+            // widok main menu
         }
 
         return null;
     }
+
 }
