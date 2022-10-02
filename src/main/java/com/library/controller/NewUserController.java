@@ -8,7 +8,6 @@ import com.library.dto.NewUserData;
 import com.library.model.Address;
 import com.library.model.User;
 import com.library.view.MainMenuView;
-import com.library.view.NewUserView;
 import com.library.view.View;
 
 import java.util.List;

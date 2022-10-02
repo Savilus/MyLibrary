@@ -7,22 +7,29 @@ import lombok.AllArgsConstructor;
 import java.util.Scanner;
 
 @AllArgsConstructor
-public class NewUserView implements View{
+public class NewUserView implements View {
 
-     private final Scanner scanner;
-     private final NewUserController newUserController;
-     public NewUserView() {
-          this.scanner = new Scanner(System.in);
-          this.newUserController = new NewUserController();
-     }
-     @Override
-     public void display() {
-          newUserController.createNewUser(getUserData()).display();
-     }
+    private final Scanner scanner;
+    private final NewUserController newUserController;
+    public NewUserView() {
+        this.scanner = new Scanner(System.in);
+        this.newUserController = new NewUserController();
+    }
+    @Override
+    public void display() {
+        newUserController.createNewUser(getUserData()).display();
+    }
 
-    private NewUserData getUserData() {
+    private String getLoginData() {
         System.out.println("Enter user name:");
         String login = scanner.nextLine();
+
+        return login;
+    }
+
+
+    private NewUserData getUserData() {
+        String login = getLoginData();
         // walidacja loginu
         System.out.println("Enter password:");
         String password = scanner.nextLine();
