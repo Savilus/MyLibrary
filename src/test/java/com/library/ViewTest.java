@@ -1,5 +1,6 @@
 package com.library;
 
+import com.library.util.GetInput;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -15,7 +16,7 @@ class ViewTest {
 
     @Test
     void shouldReturnInputProvidedByTheUser() throws FileNotFoundException {
-        View view = new View(new Scanner(USER_INPUT));
+        GetInput view = new GetInput(new Scanner(USER_INPUT));
 
         assertThat(view.getInput()).isEqualTo(EXPECTED_RESULT);
     }

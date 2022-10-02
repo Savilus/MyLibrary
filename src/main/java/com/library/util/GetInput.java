@@ -1,20 +1,20 @@
-package com.library;
+package com.library.util;
 
 import lombok.AllArgsConstructor;
 
 import java.util.Scanner;
 
 @AllArgsConstructor
-public class View {
+public class GetInput {
 
     private final Scanner scanner;
 
-    public View() {
+    public GetInput() {
         scanner = new Scanner(System.in);
     }
+    
 
     public String getInput() {
-        System.out.println("wprowadz dane");
         return scanner.nextLine();
     }
 }
