@@ -6,7 +6,7 @@ import org.hibernate.Session;
 
 import java.util.Optional;
 
-public class UserDaoImpl implements UserByLogin, UserById {
+public class UserDaoImpl implements UserByLogin, UserById, AddNewUser {
 
     @Override
     public Optional<User> getUserByLogin(String login) {
@@ -24,4 +24,12 @@ public class UserDaoImpl implements UserByLogin, UserById {
         return Optional.empty();
     }
 
+    @Override
+    public void addNewUser(User user) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.getTransaction().begin();
+        session.persist(user);
+        session.getTransaction().commit();
+        session.close();
+    }
 }

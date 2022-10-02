@@ -28,15 +28,20 @@ public class User {
     @OneToMany
     private List<Rental> rental;
 
-    @Enumerated(value = EnumType.STRING)
     @ManyToMany
     @JoinTable(name = "ROLE_USER",
     joinColumns = @JoinColumn(name = "ROLE_ID"),
     inverseJoinColumns = @JoinColumn(name = "USER_ID"))
     private List<Role> roles;
 
-
-
-
-
+    public User(String login, String password, String name, String lastName, String email, Address address, List<Rental> rental, List<Role> roles) {
+        this.login = login;
+        this.password = password;
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.address = address;
+        this.rental = rental;
+        this.roles = roles;
+    }
 }
