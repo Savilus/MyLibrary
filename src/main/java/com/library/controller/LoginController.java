@@ -1,14 +1,14 @@
 package com.library.controller;
 
-import com.library.service.LoginService;
 import com.library.service.LoginServiceImpl;
+import com.library.service.UserService;
 import com.library.view.LoginView;
 import com.library.view.View;
 
 public class LoginController {
 
     private LoginView loginView;
-    private LoginService loginService;
+    private UserService loginService;
 
     public LoginController() {
         this.loginView = new LoginView();
@@ -24,6 +24,7 @@ public class LoginController {
         if (!checkLoginAndPassword) {
            loginView.display();
         } else {
+
 
             // tutaj set active usera
             // widok main menu

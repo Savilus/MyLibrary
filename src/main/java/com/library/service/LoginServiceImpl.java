@@ -7,11 +7,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.util.Optional;
-import java.util.function.Function;
 
 @AllArgsConstructor
 @Getter
-public class LoginServiceImpl implements LoginService {
+public class LoginServiceImpl implements UserService {
 
     private final UserByLogin userDao;
 
@@ -26,6 +25,12 @@ public class LoginServiceImpl implements LoginService {
                 .map(user -> checkUserPassword(user, password))
                 .orElse(false);
     }
+
+    @Override
+    public Optional<User> getUserByLogin(String login) {
+        return Optional.empty();
+    }
+
     private boolean checkUserPassword(User user, String providedPassword) {
         return user.getPassword().equals(providedPassword);
     }
