@@ -1,10 +1,8 @@
 package com.library.view;
 
 import com.library.controller.LoginController;
-import com.library.model.User;
 import lombok.Getter;
 
-import java.util.Optional;
 import java.util.Scanner;
 
 @Getter

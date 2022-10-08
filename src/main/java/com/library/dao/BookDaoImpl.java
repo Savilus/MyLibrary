@@ -29,9 +29,9 @@ public class BookDaoImpl implements BookDao {
     @Override
     public List<Book> availableBooksByCategory(Category category) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        List<Book> availableBooksByCategory = session.createQuery("SELECT b FROM Book AS b" +
-                        "JOIN Category AS cat b.category_id = cat.category_id" +
-                        "WHERE cat.category = :category", Book.class)
+        List<Book> availableBooksByCategory = session.createQuery("SELECT b FROM Book AS b"
+                        + "JOIN Category AS cat b.category_id = cat.category_id"
+                        + "WHERE cat.category = :category", Book.class)
                 .setParameter("category", category.getCategory())
                 .stream().collect(Collectors.toList());
 

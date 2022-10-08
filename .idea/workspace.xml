@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e14da5-0dbc-4c42-a0db-a9e882ed3332" name="Changes" comment="showRentedBook">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/controller/UserRentalBooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/controller/UserRentalBooksController.java" afterDir="false" />
+    <list default="true" id="e5e14da5-0dbc-4c42-a0db-a9e882ed3332" name="Changes" comment="checkstyle">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dao/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dao/BookDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dao/RoleByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dao/RoleByName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dao/RoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dao/RoleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dto/ActiveUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/ActiveUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/RolesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/service/RolesServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/MainMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/MainMenuView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665213445322</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="checkstyle">
+      <created>1665214250578</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665214250578</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -274,6 +272,7 @@
     <MESSAGE value="Enum role" />
     <MESSAGE value="merge with newUser" />
     <MESSAGE value="showRentedBook" />
-    <option name="LAST_COMMIT_MESSAGE" value="showRentedBook" />
+    <MESSAGE value="checkstyle" />
+    <option name="LAST_COMMIT_MESSAGE" value="checkstyle" />
   </component>
 </project>
