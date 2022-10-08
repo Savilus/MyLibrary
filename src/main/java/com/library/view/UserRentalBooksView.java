@@ -1,13 +1,14 @@
-package com.library;
+package com.library.view;
 
-import com.library.util.HibernateUtil;
-import com.library.view.MainMenuView;
-import org.hibernate.Session;
+import com.library.controller.UserRentalBooksController;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
-public class Main {
+public class UserRentalBooksView implements View {
+
+    private final UserRentalBooksController userRentedBooksController;
+    private Scanner scanner;
+
     public static final String ANSI_RED = "\u001B[31m";
 
     public static final String ANSI_RESET = "\u001B[0m";
@@ -15,21 +16,12 @@ public class Main {
     public static final String ANSI_GREEN = "\u001B[32m";
 
     public static final String ANSI_WHITE = "\u001B[37m";
-    Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
 
-        Main main = new Main();
-        main.showRentedBookListForAdmin();
-//        int userKeyPress;
-//        do{
-//            System.out.println("For exit please press 1");
-//            userKeyPress  = scanner.nextInt();
-//        }while(!(userKeyPress == 1));
+    public UserRentalBooksView() {
+        this.userRentedBooksController = new UserRentalBooksController();
 
-        //   Session session = HibernateUtil.getSessionFactory().openSession();
-
-        //  session.close();
+        this.scanner = new Scanner(System.in);
     }
 
     public void showRentedBookListForUser() {
@@ -38,7 +30,6 @@ public class Main {
         // lista z wypożyczonymi książkami
         String userKeyPress;
         do {
-            System.out.println("");
             System.out.println(ANSI_WHITE + "For exit please press 1" + ANSI_RESET);
             userKeyPress = scanner.nextLine();
         } while (!userKeyPress.equals("1"));
@@ -65,6 +56,7 @@ public class Main {
             case "2":
                 System.out.println(ANSI_RED + "You didn't returned the book" + ANSI_RESET);
                 showRentedBookListForAdmin();
+                break;
             case "e":
             case "E":
                 new MainMenuView();
@@ -73,6 +65,10 @@ public class Main {
                 System.out.println("Please enter number [1] or [2]! Press E to go to Main Menu ");
                 showRentedBookListForAdmin();
         }
+    }
 
+    @Override
+    public void display() {
+        userRentedBooksController.checkUserRole().display();
     }
 }

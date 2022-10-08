@@ -6,7 +6,6 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum UserRole {
-    // wywołanie tego enuma na podstawie tego co przychodzi z encji role
 
     USER(1, "user"),
     ADMIN(2, "admin");

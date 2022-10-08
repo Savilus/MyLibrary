@@ -30,8 +30,8 @@ public class User {
 
     @ManyToMany
     @JoinTable(name = "ROLE_USER",
-    joinColumns = @JoinColumn(name = "ROLE_ID"),
-    inverseJoinColumns = @JoinColumn(name = "USER_ID"))
+            joinColumns = @JoinColumn(name = "ROLE_ID"),
+            inverseJoinColumns = @JoinColumn(name = "USER_ID"))
     private List<Role> roles;
 
     public User(String login, String password, String name, String lastName, String email, Address address, List<Rental> rental, List<Role> roles) {
@@ -43,5 +43,10 @@ public class User {
         this.address = address;
         this.rental = rental;
         this.roles = roles;
+    }
+
+    public User(String login, String password){
+        this.login = login;
+        this.password = password;
     }
 }

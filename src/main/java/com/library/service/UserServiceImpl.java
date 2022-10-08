@@ -10,12 +10,12 @@ import java.util.Optional;
 
 @AllArgsConstructor
 @Getter
-public class LoginServiceImpl implements UserService {
+public class UserServiceImpl implements UserService {
 
     private final UserByLogin userDao;
 
 
-    public LoginServiceImpl() {
+    public UserServiceImpl() {
         this.userDao = new UserDaoImpl();
     }
 
@@ -28,7 +28,7 @@ public class LoginServiceImpl implements UserService {
 
     @Override
     public Optional<User> getUserByLogin(String login) {
-        return Optional.empty();
+        return userDao.getUserByLogin(login);
     }
 
     private boolean checkUserPassword(User user, String providedPassword) {

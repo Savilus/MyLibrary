@@ -1,8 +1,10 @@
 package com.library.view;
 
 import com.library.controller.LoginController;
+import com.library.model.User;
 import lombok.Getter;
 
+import java.util.Optional;
 import java.util.Scanner;
 
 @Getter
@@ -11,30 +13,24 @@ public class LoginView implements View {
     private Scanner scanner;
     private final LoginController loginController;
 
-    // dodać konstruktor z dodatkową wiadomością
-    // jeżeli jest złe hasło, optional z dodatkową wiadomością
     public LoginView() {
         this.scanner = new Scanner(System.in);
         this.loginController = new LoginController();
     }
 
-    public String printLoginIntoLibrary() {
+    public String[] getUserLoginAndPassword(){
+        String[] loginAndPassword = new String[2];
         System.out.println("Please provide your login.");
         String userLogin = getInformationFromUser();
-        return userLogin;
-    }
-
-    public String printPasswordIntoLibrary(){
+        loginAndPassword[0] = userLogin;
         System.out.println("Input your password");
         String userPassword = getInformationFromUser();
-        return userPassword;
+        loginAndPassword[1] = userPassword;
+       return loginAndPassword;
     }
-
-    public void printIfLoginOrPasswordIsWrong(){
+    public void printIfLoginOrPasswordIsWrong() {
         System.out.println("Your login or password is incorrect.");
         System.out.println("Please try again.");
-        printLoginIntoLibrary();
-        printPasswordIntoLibrary();
 
     }
     private String getInformationFromUser() {
@@ -43,8 +39,6 @@ public class LoginView implements View {
 
     @Override
     public void display() {
-        printLoginIntoLibrary();
-        printPasswordIntoLibrary();
         loginController.checkUser().display();
     }
 }
