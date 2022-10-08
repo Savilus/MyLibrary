@@ -41,8 +41,8 @@ public class BookDaoImpl implements BookDao {
 
     public List<Book> availableBooks() {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        List<Book> availableBooks = session.createQuery("SELECT b FROM Book AS b" +
-                        "WHERE b.available_amount > 0", Book.class)
+        List<Book> availableBooks = session.createQuery("SELECT b FROM Book AS b"
+                      +  "WHERE b.available_amount > 0", Book.class)
                 .stream()
                 .collect(Collectors.toList());
         return null;
