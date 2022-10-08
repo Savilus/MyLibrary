@@ -10,7 +10,7 @@ public class RolesServiceImpl implements RolesService {
         String admin = UserRole.ADMIN.getName();
         String user = UserRole.USER.getName();
 
-        if(name.equals(admin)){
+        if (name.equals(admin)) {
             UserRole userRole = UserRole.ADMIN;
             ApplicationContext.activeUser().setRole(userRole);
 

@@ -22,7 +22,7 @@ public class ActiveUser {
         this.email = email;
     }
 
-    public void setRole(UserRole userRole){
+    public void setRole(UserRole userRole) {
         role.add(userRole);
     }
 }

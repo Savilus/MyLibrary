@@ -14,11 +14,11 @@ public class BookDaoImpl implements BookDao {
     @Override
     public List<Book> availableBooksByAuthor(Author author) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        List<Book> availableBooksByAuthor = session.createQuery("SELECT b FROM Book AS b" +
-                        "JOIN Author AS A ON A.Author_ID = b.Author_ID  " +
-                        "WHERE b.available_amount > 0" +
-                        "AND Author.last_name = :authorName" +
-                        "AND Author.last_name = :authorLastName", Book.class)
+        List<Book> availableBooksByAuthor = session.createQuery("SELECT b FROM Book AS b"
+                        + "JOIN Author AS A ON A.Author_ID = b.Author_ID  "
+                        + "WHERE b.available_amount > 0"
+                        + "AND Author.last_name = :authorName"
+                        + "AND Author.last_name = :authorLastName", Book.class)
                 .setParameter("authorName", author.getName())
                 .setParameter("authorLastName", author.getLastName())
                 .stream().collect(Collectors.toList());

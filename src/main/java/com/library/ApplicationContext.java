@@ -15,18 +15,18 @@ public class ApplicationContext {
 
 
     private final UserService loggedIn = new UserServiceImpl();
-    private final static ActiveUser activeUser = new ActiveUser();
+    private static final ActiveUser ACTIVE_USER = new ActiveUser();
 
     public static ActiveUser activeUser() {
-        return activeUser;
+        return ACTIVE_USER;
     }
 
     public void setActiveUser(String login) {
 
         Optional<User> loggedInUser = loggedIn.getUserByLogin(login);
-        activeUser.setName(loggedInUser.get().getName());
-        activeUser.setLastName(loggedInUser.get().getLastName());
-        activeUser.setEmail(loggedInUser.get().getEmail());
+        ACTIVE_USER.setName(loggedInUser.get().getName());
+        ACTIVE_USER.setLastName(loggedInUser.get().getLastName());
+        ACTIVE_USER.setEmail(loggedInUser.get().getEmail());
 
         List<Role> roles = loggedInUser.get().getRoles();
         RolesService rolesService = new RolesServiceImpl();

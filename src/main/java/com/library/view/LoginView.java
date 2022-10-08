@@ -18,7 +18,7 @@ public class LoginView implements View {
         this.loginController = new LoginController();
     }
 
-    public String[] getUserLoginAndPassword(){
+    public String[] getUserLoginAndPassword() {
         String[] loginAndPassword = new String[2];
         System.out.println("Please provide your login.");
         String userLogin = getInformationFromUser();

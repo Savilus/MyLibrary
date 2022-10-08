@@ -4,9 +4,7 @@ import com.library.model.Role;
 import com.library.util.HibernateUtil;
 import org.hibernate.Session;
 
-import java.util.Optional;
-
-public class RoleDao implements RoleByName{
+public class RoleDao implements RoleByName {
 
     @Override
     public Role findByName(String name) {

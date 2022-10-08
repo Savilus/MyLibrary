@@ -20,12 +20,12 @@ public class UserRentalBooksController {
         this.activeUser = ApplicationContext.activeUser();
     }
 
-    public View checkUserRole(){
+    public View checkUserRole() {
 
         Set<UserRole> roles = activeUser.getRole();
 
         for (UserRole role: roles) {
-            if(role.equals(UserRole.ADMIN)){
+            if (role.equals(UserRole.ADMIN)) {
                 userRentedBooksView.showRentedBookListForAdmin();
             } else if (role.equals(UserRole.USER)) {
                 userRentedBooksView.showRentedBookListForUser();
