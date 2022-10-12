@@ -8,7 +8,7 @@ import lombok.Getter;
 public enum UserAvailableBooksOption {
 
     ALL_AVAILABLE_BOOK("Wszystkie dostępne książki", 1),
-    AVAILABLE_BOOK_BY_CATEGORY("Dostępne książki po kategorii",2),
+    AVAILABLE_BOOK_BY_CATEGORY("Dostępne książki po kategorii", 2),
     AVAILABLE_BOOK_BY_AUTHOR("Dostępbe książki po autorze", 3);
 
 

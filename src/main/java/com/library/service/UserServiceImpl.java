@@ -3,12 +3,9 @@ package com.library.service;
 import com.library.dao.UserByLogin;
 import com.library.dao.UserDaoImpl;
 import com.library.dto.UserLoginData;
-import com.library.dto.UserRole;
 import com.library.model.User;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.util.Arrays;
 import java.util.Optional;
 
 

@@ -59,7 +59,7 @@ public class AvailableBooksService {
         return availableBooks;
     }
 
-    public List<AvailableBook> getAvailableBooksByCategory(String categoryFromUser){
+    public List<AvailableBook> getAvailableBooksByCategory(String categoryFromUser) {
         List<Book> books = availableBookDao.availableBooks();
         List<AvailableBook> availableBooks = new ArrayList<>();
 
@@ -70,7 +70,7 @@ public class AvailableBooksService {
             Category category = book.getCategory();
             int availableAmount = book.getAvailableAmount();
 
-            if(category.getCategory().equals(categoryFromUser)){
+            if (category.getCategory().equals(categoryFromUser)) {
                 AvailableBook availableBook = new AvailableBook(title, isbn, author, category, availableAmount);
                 availableBooks.add(availableBook);
             }
@@ -78,7 +78,7 @@ public class AvailableBooksService {
         return availableBooks;
     }
 
-    public List<UserAvailableBooksOption> getUserAvailableBooksOptions(){
+    public List<UserAvailableBooksOption> getUserAvailableBooksOptions() {
         return Arrays.stream(UserAvailableBooksOption.values()).collect(toList());
     }
 }

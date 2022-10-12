@@ -3,7 +3,6 @@ package com.library.view;
 import com.library.controller.AvailableBooksController;
 import com.library.dto.AvailableBook;
 import com.library.dto.UserAvailableBooksOption;
-import com.library.model.Category;
 import com.library.service.AvailableBooksService;
 import com.library.util.DisplayMapUtil;
 
@@ -19,7 +18,6 @@ public class AvailableBooksView implements View<UserAvailableBooksOption> {
     private DisplayMapUtil<UserAvailableBooksOption> userAvailableBooksOptionDisplayMapUtil;
 
     private DisplayMapUtil<AvailableBook> availableBookDisplayMapUtil;
-
 
 
     public AvailableBooksView(AvailableBooksController availableBooksController, AvailableBooksService availableBooksService) {
@@ -40,19 +38,19 @@ public class AvailableBooksView implements View<UserAvailableBooksOption> {
 
         System.out.println("Jaka listę książek chcesz wyświetlić?");
         String userChoice = scanner.nextLine();
-        if(userAvailableBooksOptionDisplayMapUtil.canBeSelected(optionsMap, userChoice)){
+        if (userAvailableBooksOptionDisplayMapUtil.canBeSelected(optionsMap, userChoice)) {
             return optionsMap.get(Integer.parseInt(userChoice));
         }
         return getAvailableListsForUsers();
     }
 
-    private void useAllAvailableBooks(){
+    private void useAllAvailableBooks() {
         List<AvailableBook> availableBooks = availableBooksService.getAvailableBooks();
         Map<Integer, AvailableBook> showAvailableBooksForUser = availableBookDisplayMapUtil.displayMap(availableBooks);
         showAvailableBooksForUser.forEach((optionId, availableBook) -> System.out.println(optionId + ". " + availableBook));
     }
 
-    private void userAvailableBooksByCategory(){
+    private void userAvailableBooksByCategory() {
         System.out.println("Podaj po jakiej kategori chcesz szukać.");
         String categoryName = scanner.nextLine();
         List<AvailableBook> availableBooks = availableBooksService.getAvailableBooksByCategory(categoryName);
@@ -64,7 +62,7 @@ public class AvailableBooksView implements View<UserAvailableBooksOption> {
     @Override
     public void display() {
         getAvailableListsForUsers();
-        }
+    }
 
     @Override
     public UserAvailableBooksOption getData() {

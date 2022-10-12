@@ -4,43 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e14da5-0dbc-4c42-a0db-a9e882ed3332" name="Changes" comment="checkstyle3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/AvailableBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/MainMenuOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/UserAvailableBooksOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/UserLoginData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/service/MainMenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/util/DisplayMapUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/ApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/controller/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/controller/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/controller/RentBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/controller/AvailableBooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/controller/UserRentalBooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/controller/UserRentalBooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dao/AvailableBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dao/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dao/AvailableBookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dto/ActiveUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/ActiveUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dto/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/RenBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/service/RentBookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/RentBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/service/AvailableBooksService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/RolesService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/RolesServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/util/GetInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/util/GetInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/MainMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/MainMenuView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/NewUserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/NewUserView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/RentBookView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/AvailableBooksView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/UserRentalBooksView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/UserRentalBooksView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/library/ApplicationContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/library/ApplicationContextTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/library/controller/LoginControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/library/controller/LoginControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/library/view/LoginViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/library/view/LoginViewTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="e5e14da5-0dbc-4c42-a0db-a9e882ed3332" name="Changes" comment="AvailableBook" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -289,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665214640045</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="AvailableBook">
+      <created>1665597342959</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665597342959</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -322,6 +293,7 @@
     <MESSAGE value="checkstyle" />
     <MESSAGE value="checkstyle2" />
     <MESSAGE value="checkstyle3" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkstyle3" />
+    <MESSAGE value="AvailableBook" />
+    <option name="LAST_COMMIT_MESSAGE" value="AvailableBook" />
   </component>
 </project>
