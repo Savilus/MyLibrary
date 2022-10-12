@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import java.util.Scanner;
 
 @AllArgsConstructor
-public class NewUserView implements View {
+public class NewUserView implements View<NewUserData> {
 
     private final Scanner scanner;
     private final NewUserController newUserController;
@@ -17,7 +17,12 @@ public class NewUserView implements View {
     }
     @Override
     public void display() {
-        newUserController.createNewUser(getUserData()).display();
+        newUserController.createNewUser(getData()).display();
+    }
+
+    @Override
+    public NewUserData getData() {
+        return getUserData();
     }
 
     private String getLoginData() {

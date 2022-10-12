@@ -4,9 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e14da5-0dbc-4c42-a0db-a9e882ed3332" name="Changes" comment="checkstyle">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dao/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dao/BookDaoImpl.java" afterDir="false" />
+    <list default="true" id="e5e14da5-0dbc-4c42-a0db-a9e882ed3332" name="Changes" comment="checkstyle3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/AvailableBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/MainMenuOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/UserAvailableBooksOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/UserLoginData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/service/MainMenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/library/util/DisplayMapUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/controller/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/controller/MainMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/controller/RentBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/controller/AvailableBooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/controller/UserRentalBooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/controller/UserRentalBooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dao/AvailableBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dao/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dao/AvailableBookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dto/ActiveUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/ActiveUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/dto/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/dto/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/RenBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/service/RentBookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/RentBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/service/AvailableBooksService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/RolesService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/RolesServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/util/GetInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/util/GetInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/MainMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/MainMenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/NewUserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/NewUserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/RentBookView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/AvailableBooksView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/UserRentalBooksView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/UserRentalBooksView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/library/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/library/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/library/ApplicationContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/library/ApplicationContextTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/library/controller/LoginControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/library/controller/LoginControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/library/view/LoginViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/library/view/LoginViewTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +49,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -106,7 +139,7 @@
       <recent name="com.library.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.LoginControllerTest.checkUserWithCorrectLoginAndPassword">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.library.Main" />
       <module name="library" />
@@ -120,17 +153,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.library.view.*" />
+          <option name="PATTERN" value="com.library.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.library.view" />
-      <option name="MAIN_CLASS_NAME" value="com.library.view.LoginViewTest" />
+      <option name="PACKAGE_NAME" value="com.library.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.library.controller.LoginControllerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginControllerTest.checkUserWithCorrectLoginAndPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.library.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.library.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.library.controller.LoginControllerTest" />
+      <option name="METHOD_NAME" value="checkUserWithCorrectLoginAndPassword" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,22 +215,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ViewTest.shouldReturnInputProvidedByTheUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.library.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.library" />
-      <option name="MAIN_CLASS_NAME" value="com.library.ViewTest" />
-      <option name="METHOD_NAME" value="shouldReturnInputProvidedByTheUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="GroupProject" />
       <method v="2">
@@ -197,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoginControllerTest.checkUserWithCorrectLoginAndPassword" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.LoginControllerTest" />
         <item itemvalue="JUnit.LoginViewTest.shouldReturnUserLoginAndPassword" />
         <item itemvalue="JUnit.ViewTest" />
-        <item itemvalue="JUnit.ViewTest.shouldReturnInputProvidedByTheUser" />
-        <item itemvalue="JUnit.LoginViewTest" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +275,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665214250578</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="checkstyle2">
+      <created>1665214561727</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665214561727</updated>
+    </task>
+    <task id="LOCAL-00006" summary="checkstyle3">
+      <created>1665214640045</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665214640045</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,6 +320,8 @@
     <MESSAGE value="merge with newUser" />
     <MESSAGE value="showRentedBook" />
     <MESSAGE value="checkstyle" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkstyle" />
+    <MESSAGE value="checkstyle2" />
+    <MESSAGE value="checkstyle3" />
+    <option name="LAST_COMMIT_MESSAGE" value="checkstyle3" />
   </component>
 </project>

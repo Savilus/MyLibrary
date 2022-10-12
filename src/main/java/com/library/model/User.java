@@ -1,6 +1,7 @@
 package com.library.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Builder
 public class User {
 
     @Id
@@ -45,8 +47,6 @@ public class User {
         this.roles = roles;
     }
 
-    public User(String login, String password) {
-        this.login = login;
-        this.password = password;
+    public User() {
     }
 }

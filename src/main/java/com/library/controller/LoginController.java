@@ -1,6 +1,7 @@
 package com.library.controller;
 
 import com.library.ApplicationContext;
+import com.library.dto.UserLoginData;
 import com.library.model.User;
 import com.library.service.UserService;
 import com.library.service.UserServiceImpl;
@@ -12,34 +13,29 @@ import java.util.Optional;
 
 public class LoginController {
 
-    private LoginView loginView;
     private UserService loginService;
-    private MainMenuView mainMenuView;
 
     public LoginController() {
-        this.loginView = new LoginView();
         this.loginService = new UserServiceImpl();
-        this.mainMenuView = new MainMenuView();
     }
 
-    public View checkUser() {
-        String[] userLoginAndPassword = loginView.getUserLoginAndPassword();
-        String loginProvidedByUser = userLoginAndPassword[0];
-        String passwordProvidedByUser = userLoginAndPassword[1];
+    public LoginController(UserService loginService) {
+        this.loginService = loginService;
+    }
 
-        boolean checkLoginAndPassword = loginService.hasProvidedCorrectLoginData(loginProvidedByUser, passwordProvidedByUser);
+    public View<?> checkUser(UserLoginData userLoginData) {
+
+
+        boolean checkLoginAndPassword = loginService.hasProvidedCorrectLoginData(userLoginData);
 
         if (!checkLoginAndPassword) {
-            loginView.printIfLoginOrPasswordIsWrong();
-            loginView.display();
-        } else {
-            Optional<User> user = loginService.getUserByLogin(loginProvidedByUser);
-
-            ApplicationContext applicationContext = new ApplicationContext();
-            applicationContext.setActiveUser(user.get().getLogin());
+            return new LoginView(Optional.of("Your login or password is incorrect."));
         }
 
+        Optional<User> user = loginService.getUserByLogin(userLoginData.getLogin());
+        ApplicationContext.setActiveUser(user.get());
         return new MainMenuView();
     }
 
 }
+

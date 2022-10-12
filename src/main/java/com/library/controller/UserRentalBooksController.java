@@ -7,6 +7,7 @@ import com.library.view.MainMenuView;
 import com.library.view.UserRentalBooksView;
 import com.library.view.View;
 
+import java.util.Optional;
 import java.util.Set;
 
 public class UserRentalBooksController {
@@ -14,6 +15,7 @@ public class UserRentalBooksController {
     private UserRentalBooksView userRentedBooksView;
     private MainMenuView mainMenuView;
     private final ActiveUser activeUser;
+
     public UserRentalBooksController() {
         this.userRentedBooksView = new UserRentalBooksView();
         this.mainMenuView = new MainMenuView();
@@ -24,13 +26,16 @@ public class UserRentalBooksController {
 
         Set<UserRole> roles = activeUser.getRole();
 
-        for (UserRole role: roles) {
-            if (role.equals(UserRole.ADMIN)) {
-                userRentedBooksView.showRentedBookListForAdmin();
-            } else if (role.equals(UserRole.USER)) {
-                userRentedBooksView.showRentedBookListForUser();
-            }
+        Optional<UserRole> activeUserRole = roles.stream()
+                .filter(userRole -> userRole.getName().equals(activeUser.getRole()))
+                .findAny();
+
+        if (activeUserRole.equals(UserRole.ADMIN)) {
+            userRentedBooksView.adminReturnUserBookView();
+        } else if (activeUserRole.equals(UserRole.USER)) {
+            userRentedBooksView.showRentedBookListForUser();
         }
+
         return new MainMenuView();
     }
 }

@@ -1,10 +1,11 @@
 package com.library.view;
 
 import com.library.controller.UserRentalBooksController;
+import com.library.dto.RentedBook;
 
 import java.util.Scanner;
 
-public class UserRentalBooksView implements View {
+public class UserRentalBooksView implements View<RentedBook> {
 
     private final UserRentalBooksController userRentedBooksController;
     private Scanner scanner;
@@ -36,39 +37,61 @@ public class UserRentalBooksView implements View {
         new MainMenuView();
     }
 
-    public void showRentedBookListForAdmin() {
 
-        System.out.println("List of user rented books");
-        // lista - lepsza będzie linked lista
-        System.out.println("To return book do something");
-        // logika usunięcia książki
-        System.out.println(ANSI_WHITE + "Are you sure you want return this book?" + ANSI_RESET);
-        System.out.println("Enter 1 if yes.");
-        System.out.println("Enter 2 if no.");
-        System.out.println("For Exit press 'E' ");
+    public void adminReturnUserBookView() {
+
+        showUserRentedBooks();
+        returnBook();
+        confirmYouWantReturnBook();
+
         String adminPressKey = scanner.nextLine();
         switch (adminPressKey) {
             case "1":
-                System.out.println(ANSI_GREEN + "Book was successfully returned" + ANSI_RESET);
-                // usunięcie książki z listy
-                showRentedBookListForAdmin();
-                break;
+                successfullyReturnedBook();
             case "2":
-                System.out.println(ANSI_RED + "You didn't returned the book" + ANSI_RESET);
-                showRentedBookListForAdmin();
-                break;
-            case "e":
-            case "E":
-                new MainMenuView();
-                break;
+                doNotReturnBook();
             default:
-                System.out.println("Please enter number [1] or [2]! Press E to go to Main Menu ");
-                showRentedBookListForAdmin();
+                new MainMenuView();
+
         }
+    }
+
+    public void showUserRentedBooks() {
+        System.out.println("List of user rented books");
+        // lista - lepsza będzie linked lista
+    }
+
+    public void returnBook() {
+        System.out.println("To return book do something");
+        // logika usunięcia książki
+    }
+
+    public void confirmYouWantReturnBook() {
+        System.out.println(ANSI_WHITE + "Are you sure you want return this book?" + ANSI_RESET);
+        System.out.println("Enter 1 if yes.");
+        System.out.println("Enter 2 if no.");
+        System.out.println("For Exit press anything else ");
+    }
+
+    private MainMenuView successfullyReturnedBook() {
+        System.out.println(ANSI_GREEN + "Book was successfully returned" + ANSI_RESET);
+        // usunięcie książki z listy
+        adminReturnUserBookView();
+        return new MainMenuView();
+    }
+
+    private MainMenuView doNotReturnBook() {
+        System.out.println(ANSI_RED + "You didn't returned the book" + ANSI_RESET);
+        return new MainMenuView();
     }
 
     @Override
     public void display() {
         userRentedBooksController.checkUserRole().display();
+    }
+
+    @Override
+    public RentedBook getData() {
+        return null;
     }
 }

@@ -6,7 +6,7 @@ import com.library.model.Category;
 
 import java.util.List;
 
-interface BookDao {
+interface AvailableBook {
 
     List<Book> availableBooksByAuthor(Author author);
     List<Book> availableBooksByCategory(Category category);

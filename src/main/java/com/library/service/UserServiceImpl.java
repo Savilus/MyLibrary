@@ -2,13 +2,16 @@ package com.library.service;
 
 import com.library.dao.UserByLogin;
 import com.library.dao.UserDaoImpl;
+import com.library.dto.UserLoginData;
+import com.library.dto.UserRole;
 import com.library.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.Arrays;
 import java.util.Optional;
 
-@AllArgsConstructor
+
 @Getter
 public class UserServiceImpl implements UserService {
 
@@ -19,10 +22,14 @@ public class UserServiceImpl implements UserService {
         this.userDao = new UserDaoImpl();
     }
 
+    public UserServiceImpl(UserByLogin userDao) {
+        this.userDao = userDao;
+    }
+
     @Override
-    public boolean hasProvidedCorrectLoginData(String login, String password) {
-        return userDao.getUserByLogin(login)
-                .map(user -> checkUserPassword(user, password))
+    public boolean hasProvidedCorrectLoginData(UserLoginData userLoginData) {
+        return userDao.getUserByLogin(userLoginData.getLogin())
+                .map(user -> user.getPassword().equals(userLoginData.getPassword()))
                 .orElse(false);
     }
 
@@ -30,11 +37,5 @@ public class UserServiceImpl implements UserService {
     public Optional<User> getUserByLogin(String login) {
         return userDao.getUserByLogin(login);
     }
-
-    private boolean checkUserPassword(User user, String providedPassword) {
-        return user.getPassword().equals(providedPassword);
-    }
-
-
 
 }

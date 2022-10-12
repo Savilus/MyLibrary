@@ -1,14 +1,7 @@
 package com.library;
 
 import com.library.dto.ActiveUser;
-import com.library.model.Role;
-import com.library.model.User;
-import com.library.service.RolesService;
-import com.library.service.RolesServiceImpl;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
-import java.util.Optional;
 
 class ApplicationContextTest {
 

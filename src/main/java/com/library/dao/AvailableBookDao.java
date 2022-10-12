@@ -9,7 +9,7 @@ import org.hibernate.Session;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BookDaoImpl implements BookDao {
+public class AvailableBookDao implements AvailableBook {
 
     @Override
     public List<Book> availableBooksByAuthor(Author author) {
@@ -23,7 +23,7 @@ public class BookDaoImpl implements BookDao {
                 .setParameter("authorLastName", author.getLastName())
                 .stream().collect(Collectors.toList());
         session.close();
-        return null;
+        return availableBooksByAuthor;
     }
 
     @Override
@@ -34,17 +34,17 @@ public class BookDaoImpl implements BookDao {
                         + "WHERE cat.category = :category", Book.class)
                 .setParameter("category", category.getCategory())
                 .stream().collect(Collectors.toList());
-
         session.close();
-        return null;
+        return availableBooksByCategory;
     }
 
     public List<Book> availableBooks() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         List<Book> availableBooks = session.createQuery("SELECT b FROM Book AS b"
-                      +  "WHERE b.available_amount > 0", Book.class)
+                        + "WHERE b.available_amount > 0", Book.class)
                 .stream()
                 .collect(Collectors.toList());
-        return null;
+        session.close();
+        return availableBooks;
     }
 }

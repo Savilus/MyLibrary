@@ -12,7 +12,6 @@ public class GetInput {
     public GetInput() {
         scanner = new Scanner(System.in);
     }
-    
 
     public String getInput() {
         return scanner.nextLine();

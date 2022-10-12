@@ -1,12 +1,14 @@
 package com.library.service;
 
+import com.library.dto.UserLoginData;
 import com.library.model.User;
 
 import java.util.Optional;
 
 public interface UserService {
 
-    boolean hasProvidedCorrectLoginData(String login, String password);
+    boolean hasProvidedCorrectLoginData(UserLoginData userLoginData);
+
     Optional<User> getUserByLogin(String login);
 
 }
