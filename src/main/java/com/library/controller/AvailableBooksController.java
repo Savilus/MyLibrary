@@ -13,14 +13,19 @@ public class AvailableBooksController {
     private AvailableBooksService availableBooksService;
     private AvailableBooksView availableBooksView = new AvailableBooksView();
 
-    public View selectOption(UserAvailableBooksOption userOption){
-        switch (userOption){
-            case ALL_AVAILABLE_BOOK:  ;
-            case AVAILABLE_BOOK_BY_CATEGORY:;
-            case AVAILABLE_BOOK_BY_AUTHOR:;
-            default: return new MainMenuView();
+    public View selectOption(UserAvailableBooksOption userOption) {
+        switch (userOption) {
+            case ALL_AVAILABLE_BOOK:
+                new MainMenuView();
+            case AVAILABLE_BOOK_BY_CATEGORY:
+                new MainMenuView();
+            case AVAILABLE_BOOK_BY_AUTHOR:
+                new MainMenuView();
+            default:
+                return new MainMenuView();
         }
     }
+
     public List<UserAvailableBooksOption> getUserOptions() {
         return availableBooksService.getUserAvailableBooksOptions();
 

@@ -12,14 +12,14 @@ import static java.util.stream.Collectors.toSet;
 
 public class ApplicationContext {
 
-    private static ActiveUser ACTIVE_USER;
+    private static ActiveUser activeUser;
 
     public static ActiveUser activeUser() {
-        return ACTIVE_USER;
+        return activeUser;
     }
 
     public static void setActiveUser(User user) {
-        ACTIVE_USER = new ActiveUser(
+        activeUser = new ActiveUser(
                 user.getName(),
                 user.getLastName(),
                 user.getEmail(),
